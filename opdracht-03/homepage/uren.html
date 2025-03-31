@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Urenregistratie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="darkmode.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="https://clockwise.info/assets/images/logo/zwarte_letters@2x.png" alt="logo">
+        <button id="dark-mode-toggle" class="btn-darkmode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="logout-button" class="btn-logout">Uitloggen</button>
+    </header>
+    
+    
+    <section>
+        <h2>Urenregistratie</h2>
+        <div class="button-container">
+            <button id="prev-week" class="btn-week">&#9664;</button>
+            <button id="go-to-today" class="btn-go-today">Deze week</button>
+            <button id="next-week" class="btn-week">&#9654;</button>
+        </div>
+        <div class="week-selector">
+            <button class="dropdown-btn">
+                <span id="selected-week">Week ...</span>
+                <span class="arrow">&#9662;</span>
+            </button>
+            <ul class="dropdown-content" id="week-list"></ul>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Klant / Project</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+    <div id="projects-container"></div>
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
