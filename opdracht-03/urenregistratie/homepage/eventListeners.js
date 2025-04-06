@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             arrow.classList.remove("rotate");
         }
     });
-    // tot hier geleerd
+
     // Input fields event to save data
     inputFields.forEach(input => input.addEventListener("input", () => saveDataForWeek(currentWeek, inputFields)));
 
