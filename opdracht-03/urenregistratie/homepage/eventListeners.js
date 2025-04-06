@@ -24,11 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const weekItem = document.createElement("li");
         let startDate = getMondayOfWeek(new Date(currentDate.getFullYear(), 0, 4 + (i - 1) * 7));
         let endDate = new Date(startDate).setDate(startDate.getDate() + 6);
-        weekItem.textContent = `Week ${i} (${new Date(startDate).toLocaleDateString("nl-NL")} - ${new Date(endDate).toLocaleDateString("nl-NL")})`;
-        weekItem.dataset.week = i;
+        weekItem.textContent = `Week ${i} (${new Date(startDate).toLocaleDateString("nl-NL")} - ${new Date(endDate).toLocaleDateString("nl-NL")})`;  
         weekItem.addEventListener("click", function () {
             saveDataForWeek(currentWeek, inputFields);
-            currentWeek = +this.dataset.week;
+            currentWeek = i;
             updateWeekView(currentWeek, currentMonday, selectedWeek, inputFields, goToTodayBtn);
 
             // **Sluit dropdown automatisch**
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             arrow.classList.remove("rotate");
         }
     });
-
+    // tot hier geleerd
     // Input fields event to save data
     inputFields.forEach(input => input.addEventListener("input", () => saveDataForWeek(currentWeek, inputFields)));
 

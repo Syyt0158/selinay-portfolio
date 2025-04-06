@@ -43,7 +43,6 @@ export function loadStoredData(weekNumber) {
     });
 }
 
-
 export function saveDataForWeek(weekNumber, inputFields) {
     localStorage.setItem(`week_${weekNumber}`, JSON.stringify([...inputFields].map(input => +input.value || null)));
 }
@@ -69,7 +68,6 @@ export function loadTotals(selectedWeek) {
 
     rows.forEach((row, i) => {
         row.dataset.index = i;
-        // row.querySelector(".total-hours") || row.insertAdjacentHTML("beforeend", '<td class="total-hours">0</td>');
         row.querySelector(".total-hours").textContent = weekData[i]?.total || 0;
         row.querySelectorAll('input[type="number"]').forEach((input, day) => input.value = weekData[i]?.hours?.[day] || "");
     });
